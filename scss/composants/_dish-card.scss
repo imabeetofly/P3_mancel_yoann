@@ -1,0 +1,106 @@
+ul {
+  list-style-type: none;
+}
+
+.dish-card {
+  background-color: white;
+  @include shadow;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 350px;
+  height: 10vh;
+  max-height: 100px;
+  margin: 10px auto;
+  position: relative;
+  overflow: hidden;
+  .dish-title {
+    font-weight: bold;
+    margin-top: 10px;
+    padding-left: 3%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .dish-accompaniment {
+    padding-left: 3%;
+    margin-top: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0.8rem;
+  }
+  .hover-box {
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    background-color: $tertiary-color;
+    transform: translate(0, 0);
+    .fas {
+      border-radius: 20px;
+      position: absolute;
+      top: 30%;
+      left: 30%;
+      padding: 7px;
+      background-color: rgb(255, 255, 255);
+      color: $tertiary-color;
+      transform: rotate(0deg);
+    }
+    p {
+      margin-left: -40px;
+      margin-top: 38px;
+      font-weight: bolder;
+    }
+  }
+}
+
+.dish-card:hover .hover-box {
+  transform: translate(-100%, 0);
+  transition: 0.4s ease-in-out;
+}
+.dish-card:hover .dish-title {
+  width: 70%;
+}
+.dish-card:hover .dish-accompaniment {
+  width: 60%;
+}
+.dish-card:hover .hover-box .fas {
+  transform: rotate(360deg);
+  transition: 0.8s;
+}
+
+@media (min-width: 768px) {
+  .dish-card {
+    background-color: white;
+    .dish-title {
+      font-size: 1.2rem;
+    }
+    .dish-accompaniment {
+      font-size: 1rem;
+    }
+    .hover-box p {
+      margin-top: 42px;
+    }
+  }
+}
+.starter {
+  animation: opacitySwitch 1s;
+}
+.main-course {
+  animation: opacitySwitch 2s;
+}
+.dessert {
+  animation: opacitySwitch 3s;
+}
+
+@keyframes opacitySwitch {
+  0% {
+    opacity: 0;
+    transform: translate(0, 20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}

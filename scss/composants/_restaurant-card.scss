@@ -1,0 +1,55 @@
+main {
+  .restaurant-card {
+    height: 35vh;
+    width: 90%;
+    max-width: 350px;
+    max-height: 300px;
+    border-radius: 20px;
+    @include shadow;
+    margin: auto;
+    margin-top: 15px;
+    list-style-type: none;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 15px;
+    .new-addition {
+      background-color: $tertiary-color;
+      font-weight: bolder;
+      width: max-content;
+      padding: 7px 15px;
+      border-radius: 5px;
+      color: #078651;
+      position: absolute;
+      top: 10%;
+      left: 70%;
+    }
+    p {
+      padding: 3px 20px;
+    }
+    img {
+      width: 100%;
+      height: 75%;
+      object-fit: cover;
+    }
+    & a {
+      text-decoration: none;
+      color: black;
+    }
+    &__restaurant-name {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      .restaurant-card {
+        justify-content: space-around;
+      }
+    }
+  }
+}

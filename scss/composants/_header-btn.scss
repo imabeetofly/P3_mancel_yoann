@@ -1,0 +1,17 @@
+button {
+  padding: 15px 30px;
+  border-radius: 40px;
+  border: none;
+  margin: auto;
+  display: block;
+  background-image: linear-gradient($secondary-color, $primary-color);
+  color: white;
+  margin-top: 30px;
+  cursor: pointer;
+}
+button:hover {
+  background-image: linear-gradient(#ff98e2, #a164ec);
+  transform: translate(0, -5px);
+  box-shadow: 0 5px 5px #d4d2d2;
+  text-shadow: 1px 1px #757375;
+}

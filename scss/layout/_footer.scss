@@ -1,0 +1,25 @@
+footer {
+  background-color: rgb(61, 61, 61);
+  color: rgb(255, 255, 255);
+  padding: 30px;
+  h2 {
+    color: white;
+    font-family: "Shrikhand", cursive;
+  }
+  ul {
+    li {
+      display: flex;
+      i {
+        margin: 20px 10px 0 0;
+        width: 20px;
+      }
+      p {
+        margin-top: 20px;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.heart-icon {
+  fill: transparent;
+  stroke: black;
+  stroke-width: 20;
+  cursor: pointer;
+  position: relative;
+  left: 90%;
+  bottom: 10%;
+  svg {
+    overflow: visible;
+    width: 1.3rem;
+  }
+  path {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 1550;
+    transform-origin: center;
+  }
+  .heart-background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    stroke: none;
+  }
+  .heart-main:hover path {
+    animation: stroke-animation 2s ease-in-out forwards;
+  }
+}
+
+@keyframes stroke-animation {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  30% {
+    stroke-dashoffset: 1550;
+  }
+  50% {
+  }
+  60% {
+    stroke-dashoffset: 3100;
+    fill: transparent;
+    stroke: $secondary-color;
+  }
+  80% {
+    fill: $secondary-color;
+  }
+  100% {
+    stroke-dashoffset: 3100;
+    fill: $secondary-color;
+    stroke: $secondary-color;
+  }
+}
