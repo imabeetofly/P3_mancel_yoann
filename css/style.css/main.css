@@ -185,7 +185,7 @@ nav .link:hover .link__description {
   border-radius: 40px;
   width: 100%;
   margin-top: -50px;
-  padding: 30px;
+  padding: 40px;
   position: absolute;
   font-family: "Shrikhand", cursive;
   font-size: 1.5em;
@@ -276,11 +276,11 @@ button:hover {
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  animation: spin 850ms linear;
   position: absolute;
   top: 50%;
   left: 35%;
   opacity: 0;
+  animation: spin 850ms linear;
 }
 
 @keyframes spin {
@@ -495,59 +495,34 @@ ul {
   }
 }
 
-.heart-icon {
-  fill: transparent;
-  stroke: black;
-  stroke-width: 20;
+.fill__heart {
+  width: max-content;
+  padding: 2px;
   cursor: pointer;
   position: relative;
-  left: 90%;
-  bottom: 10%;
+  left: 85%;
+  bottom: 15%;
+  transform: scale(0.7);
 }
 
-.heart-icon svg {
-  overflow: visible;
-  width: 1.3rem;
+.fill__heart:hover .fill {
+  animation: fill 0.3s ease-in-out;
+  display: inline-block;
+  opacity: 1;
+  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 
-.heart-icon path {
-  stroke-dashoffset: 0;
-  stroke-dasharray: 1550;
-  transform-origin: center;
-}
-
-.heart-icon .heart-background {
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  stroke: none;
-}
-
-.heart-icon .heart-main:hover path {
-  animation: stroke-animation 2s ease-in-out forwards;
-}
-
-@keyframes stroke-animation {
+@keyframes fill {
   0% {
-    stroke-dashoffset: 0;
-  }
-  30% {
-    stroke-dashoffset: 1550;
+    transform: scale(0);
   }
   50% {
   }
-  60% {
-    stroke-dashoffset: 3100;
-    fill: transparent;
-    stroke: #ff79da;
-  }
-  80% {
-    fill: #ff79da;
-  }
   100% {
-    stroke-dashoffset: 3100;
-    fill: #ff79da;
-    stroke: #ff79da;
+    transform: scale(1);
   }
 }

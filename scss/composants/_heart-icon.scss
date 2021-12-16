@@ -1,52 +1,44 @@
-.heart-icon {
-  fill: transparent;
-  stroke: black;
-  stroke-width: 20;
+.fill__heart {
+  width: max-content;
+  padding: 2px;
   cursor: pointer;
   position: relative;
-  left: 90%;
-  bottom: 10%;
-  svg {
-    overflow: visible;
-    width: 1.3rem;
-  }
-  path {
-    stroke-dashoffset: 0;
-    stroke-dasharray: 1550;
-    transform-origin: center;
-  }
-  .heart-background {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    stroke: none;
-  }
-  .heart-main:hover path {
-    animation: stroke-animation 2s ease-in-out forwards;
-  }
+  left: 85%;
+  bottom: 15%;
+  transform: scale(0.7);
+}
+.fill__heart:hover .fill {
+  animation: fill 0.3s ease-in-out;
+  display: inline-block;
+  opacity: 1;
+  background: linear-gradient(
+    to left,
+    #9356dc,
+    #b35cdc,
+    #cf64dc,
+    #e86edb,
+    #ff79da
+  );
+  background: -webkit-linear-gradient(
+    to left,
+    #9356dc,
+    #b35cdc,
+    #cf64dc,
+    #e86edb,
+    #ff79da
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 
-@keyframes stroke-animation {
+@keyframes fill {
   0% {
-    stroke-dashoffset: 0;
-  }
-  30% {
-    stroke-dashoffset: 1550;
+    transform: scale(0);
   }
   50% {
   }
-  60% {
-    stroke-dashoffset: 3100;
-    fill: transparent;
-    stroke: $secondary-color;
-  }
-  80% {
-    fill: $secondary-color;
-  }
   100% {
-    stroke-dashoffset: 3100;
-    fill: $secondary-color;
-    stroke: $secondary-color;
+    transform: scale(1);
   }
 }
